@@ -1,0 +1,53 @@
+    main {
+        .banner {
+            height: 100vh;
+            width: 100%;
+            background-image: url("../imagenes/bannerIndex.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            div {
+                text-align: center;
+                position: absolute;
+                color: white;
+                opacity: 70%;
+                width: 100%;
+
+                h1 {
+                    font-size: 20vw;
+                    font-family: $fontSubtitulos;
+                }
+
+                h2 {
+                    font-size: 18vw;
+                    font-family: $fontSubtitulos;
+                }
+            }
+        }
+
+        .frase {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            .mt-4 {
+                width: 70vw;
+                max-width: 90vw;
+                height: auto;
+                background-image: url(../imagenes/girasoles.jpg);
+                object-fit: cover;
+                background-position: center;
+                text-align: center;
+            }
+
+            .frase h2 {
+                text-shadow: rgb(31, 31, 31) 1px 1px;
+            }
+        }
+    }
