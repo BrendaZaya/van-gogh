@@ -1,3 +1,68 @@
+    @mixin galeria {
+        .imagenGaleria {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: 0.5s ease;
+                background-color: rgba(0, 0, 0, .5);
+
+                p {
+                    color: white;
+                    font-size: 16px;
+                    position: absolute;
+                    top: 68%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            }
+
+            img {
+                transition:all 0.8s;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            &:hover img {
+                transform: scale(1.2);
+                transition:all 0.8s;
+            }
+
+            &:hover .overlay {
+                opacity: 1;
+            }
+
+            .text {
+                color: white;
+                font-size: 22px;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+        }
+        
+    }
+    
+    /*------------galería index------------*/
+
     .seccionGaleria {
         padding: 2vh;
 
@@ -11,70 +76,22 @@
             grid-auto-rows: 60vh;
             padding: 4vh;
             gap: 1vw;
-
-            .imagenGaleria {
-                position: relative;
-                width: 100%;
-                overflow: hidden;
-
-                .overlay {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    height: 100%;
-                    width: 100%;
-                    opacity: 0;
-                    transition: 0.5s ease;
-                    background-color: rgba(0, 0, 0, .5);
-
-                    p {
-                        color: white;
-                        font-size: 16px;
-                        position: absolute;
-                        top: 58%;
-                        left: 50%;
-                        -webkit-transform: translate(-50%, -50%);
-                        -ms-transform: translate(-50%, -50%);
-                        transform: translate(-50%, -50%);
-                        text-align: center;
-                    }
-                }
-
-                img {
-                    transition:all 0.8s;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    display: block;
-                }
-
-                &:hover img {
-                    transform: scale(1.2);
-                    transition:all 0.8s;
-                }
-
-                &:hover .overlay {
-                    opacity: 1;
-                }
-
-                .text {
-                    color: white;
-                    font-size: 24px;
-                    position: relative;
-                    top: 50%;
-                    left: 50%;
-                    -webkit-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-                    text-align: center;
-                }
-            }
+            @include galeria();
         }
     }
 
-    /*--------------------galería-----------------*/
+    /*------------galería pinturas------------*/
+
+        .galeriaPinturas {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-rows: 50vh;
+            padding: 4vh;
+            gap: 1vw;
+            @include galeria();
+        }
+
+    /*-------------------galerías-----------------*/
     /*--------------------tablets-----------------*/
 
     @media (min-width:768px) {
@@ -83,11 +100,24 @@
         }
     }
 
-    /*--------------------desktops-----------------*/
+    @media (min-width:768px) {
+        .galeriaPinturas {
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+    /*------------galerías desktops---------------*/
 
     @media (min-width:1024px) {
         .galeriaIndex {
             grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+        }
+    }
+
+    @media (min-width:1024px) {
+        .galeriaPinturas {
+            grid-template-columns: repeat(5, 1fr);
             width: 100%;
         }
     }

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinturas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+<body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section class="detalleDeObra">
+                        <div class="detalleDeObraContenedor">
+                            <div class="imagenPintura">
+                                <img src="../imagenes/laNocheEstrellada.jpg" alt="">
+                            </div>          
+                            <section class="infoPintura">  
+                                <h1>La noche estrellada</h1>
+                                <p>
+                                    El cielo nocturno de Van Gogh es un campo de energía turbulenta. Debajo de las estrellas explosivas, el pueblo es un lugar de orden tranquilo. Conectando la tierra y el cielo está el ciprés en forma de llama, un árbol tradicionalmente asociado con los cementerios y el luto. Pero la muerte no era siniestra para van Gogh. "Mirar las estrellas siempre me hace soñar", dijo, "¿por qué, me pregunto, los puntos brillantes del cielo no deberían ser tan accesibles como los puntos negros en el mapa de Francia? Justo cuando tomamos el tren a llegar a Tarascon o Rouen, tomamos la muerte para llegar a una estrella".
+                                </p>
+                                <p>
+                                    El artista escribió sobre su experiencia a su hermano Theo: "Esta mañana vi el país desde mi ventana mucho antes del amanecer, sin nada más que la estrella de la mañana, que se veía muy grande". Esta estrella matutina, o Venus, puede ser la gran estrella blanca justo a la izquierda del centro en La noche estrellada. La aldea, por otro lado, está inventada, y la aguja de la iglesia evoca la tierra natal de van Gogh, los Países Bajos. La pintura, como su compañera diurna, Los olivos, tiene sus raíces en la imaginación y la memoria. Dejando atrás la doctrina impresionista de la fidelidad a la naturaleza en favor del sentimiento inquieto y el color intenso, como en este cuadro de gran carga, van Gogh hizo de su obra una piedra de toque para toda la pintura expresionista posterior.
+                                </p>  
+                            </section>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../imagenes/firmapng.png" alt=""></a>
+                <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler"><i class="fa-solid fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../index.htm">Inicio</a>
+                        <a class="nav-link active" href="#">Pinturas</a>
+                        <a class="nav-link" href="#">Biografía</a>
+                        <a class="nav-link" href="#">Cartas</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="bannerFloatPinturas">
+        <div class="float">
+            <img src="../imagenes/Lirios.webp" alt="carta escrita por Van Gogh">
+            <h1>El artista</h1>
+            <p>
+                Más de 130 años después de su muerte, Vincent Van Gogh sigue siendo uno de los artistas más famosos de todos los tiempos. Sus pinceladas son ampliamente reconocibles y su público se extiende por todo el mundo.
+            </p>
+            <p>
+                Celebrado tanto por su práctica artística como por su personalidad, Van Gogh produjo una obra que se encuentra entre las más reconocidas del mundo. El estilo distintivo de sus populares pinturas, definido por pinceladas gruesas y una vívida paleta de colores, paisajes luminosos, expresivos retratos y vibrantes naturalezas muertas vibrantes se han convertido en representativos del artista. 
+            </p> 
+            <p>             
+                El arte de Van Gogh se volvió asombrosamente popular después de su muerte, especialmente a finales del siglo XX, cuando su trabajo se vendió por sumas récord en subastas de todo el mundo y se mostró en exposiciones itinerantes de gran éxito.
+            </p>
+        </div>
+    </section>
+    <section class="seccionGaleria">
+        <h2 class="subtitulo">Obras destacadas</h2>
+        <div class="galeriaPinturas">
+            <div class="imagenGaleria">
+                <a data-bs-toggle="modal" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="../imagenes/laNocheEstrellada.jpg" alt="imagen la noche estrellada">
+                <div class="overlay">
+                    <div class="text">The Starry Night</div>
+                    <p>1889</p>
+                </div></a>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/autorretrato.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">Self-Portrait</div>
+                    <p>1889</p>
+                </div> 
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/laSiesta.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">The siesta (after Millet)</div>
+                    <p>1890</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/Lirios.webp" alt="">
+                <div class="overlay">
+                    <div class="text">Irises</div>
+                    <p>Mayo 1890</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/autoretratoConSombrero.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">Self-portrait with hat</div>
+                    <p>Octubre 1887</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/campoDeTrigoConCypresses.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">Campo de trigo con Cypresses</div>
+                    <p>1889</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/girasoles.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">Girasoles</div>
+                    <p>Enero 1889</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/pinkPeachTrees.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">Pink peach trees</div>
+                    <p>Marzo 1888</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/postmanJosephRoulin.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">Postman Joseph Roulin</div>
+                    <p>1888</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/laBerceuse.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">La berceuse</div>
+                    <p>Enero 1889</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/portraitOfJosephRoulin.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">Portrait of Joseph Roulin</div>
+                    <p>Enero 1889</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/LosLirios.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">Irises</div>
+                    <p>Enero 1889</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/roses.JPG" alt="">
+                <div class="overlay">
+                    <div class="text">Roses</div>
+                    <p>Enero 1890</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/windmillsOnMontmartre.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">Windmills on Montmartre</div>
+                    <p>Enero 1886</p>
+                </div>
+            </div>
+            <div class="imagenGaleria">
+                <img src="../imagenes/vaseWithDaisiesAndPoppies.jpg" alt="">
+                <div class="overlay">
+                    <div class="text">Vase with Daisies and Poppies</div>
+                    <p>Enero 1890</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <Footer>
+        <ul class="socialIconos">
+            <li><a href="https://www.linkedin.com/in/brenda-zaya/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://www.behance.net/brendazaya"><i class="fa-brands fa-behance"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+        <p class="copyright"> <i class="fa-solid fa-copyright"></i> 2022 by BRENDA ZAYA </p>
+    </Footer>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</body>
+</html>
