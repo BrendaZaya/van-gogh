@@ -76,9 +76,10 @@
         .navbar-brand {
 
             img {
-                height: 5vh;
-                min-width: 130px;
+                height: 3vh;
+                min-width: 100px;
                 object-fit: cover;
+                margin: 16px;
                 margin-left: 22px;
             }
         }
@@ -133,108 +134,219 @@
                     }
                 }
             }
+
+            .navbar-brand {
+
+                img {
+                    height: 5vh;
+                    margin-left: 42px;
+                }
+            }
         }
     }
 
 //----------------------------footer--------------------------*/
 
-footer {
-    height: 24vh;
-    width: 100%;
-    background-color: $colorPrimario;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .socialIconos {
-        min-width: 20vw;
-        height: 16vh;
+    footer {
+        height: 24vh;
+        width: 100%;
+        background-color: $colorPrimario;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-        margin-top: 2vh;
 
-        li {
-            list-style: none;
-            padding: 20px;
+        .socialIconos {
+            min-width: 20vw;
+            height: 16vh;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+            margin-top: 2vh;
 
-            a {
-                display: block;
-                position: relative;
-                width: 50px;
-                height: 50px;
-                line-height: 50px;
-                font-size: 2em;
-                border-radius: 50%;
-                text-align: center;
-                color: #fff;
-                background: #000;
-                transition: 0.5s;
-                overflow: hidden;
+            li {
+                list-style: none;
+                padding: 20px;
 
-                &:hover {
-                    transform: scale(1.2);
-                }
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
+                a {
+                    display: block;
+                    position: relative;
+                    width: 50px;
                     height: 50px;
-                    z-index: -1;
-                    transform: scale(1);
-                    top: 0;
-                    left: 0;
+                    line-height: 50px;
+                    font-size: 2em;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: #fff;
+                    background: #000;
                     transition: 0.5s;
+                    overflow: hidden;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 50px;
+                        z-index: -1;
+                        transform: scale(1);
+                        top: 0;
+                        left: 0;
+                        transition: 0.5s;
+                    }
+
+                    &:hover::before {
+                        transform: scale(0);
+                    
+                    }
                 }
 
-                &:hover::before {
-                    transform: scale(0);
-                
+                &:nth-child(1) a,
+                &:nth-child(1) a::before {
+                    background-color: $colorLinkedin;
+                }
+
+                &:nth-child(2) a,
+                &:nth-child(2) a::before {
+                    background-color: $colorBehance;
+                }
+
+                &:nth-child(3) a,
+                &:nth-child(3) a::before {
+                    background-color: $colorMail;
+                }
+
+                /* hover efecto */
+
+                &:nth-child(1) a:hover {
+                    background-color: #fff;
+                    color: $colorLinkedin;
+                }
+
+                &:nth-child(2) a:hover {
+                    background-color: #fff;
+                    color: $colorBehance;
+                }
+
+                &:nth-child(3) a:hover {
+                    background-color: #fff;
+                    color: $colorMail;
                 }
             }
+        }
 
-            &:nth-child(1) a,
-            &:nth-child(1) a::before {
-                background-color: $colorLinkedin;
-            }
-
-            &:nth-child(2) a,
-            &:nth-child(2) a::before {
-                background-color: $colorBehance;
-            }
-
-            &:nth-child(3) a,
-            &:nth-child(3) a::before {
-                background-color: $colorMail;
-            }
-
-            /* hover efecto */
-
-            &:nth-child(1) a:hover {
-                background-color: #fff;
-                color: $colorLinkedin;
-            }
-
-            &:nth-child(2) a:hover {
-                background-color: #fff;
-                color: $colorBehance;
-            }
-
-            &:nth-child(3) a:hover {
-                background-color: #fff;
-                color: $colorMail;
-            }
+        .copyright {
+            font-size: 12px;
+            color: #fff;
+            padding: 10px;
         }
     }
 
-    .copyright {
-        font-size: 12px;
-        color: #fff;
-        padding: 10px;
+/* -----------------------banners------------------------*/
+/* -se aplican en paginas de pintura, biografía y cartas-*/
+
+    .banner {
+        width: 100%;
+        height: 40rem;
+        background-color: $colorBanner3;
+        display: flex;
+        flex-direction: row;
+        padding: 40px;
+        align-items: center;
+
+        .textoBanner {
+            padding: 4%;
+
+            h1 {
+                font-size: 42;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+        img {
+            height: 500px;
+            min-width: 600px;
+            margin: 20px;
+            object-fit: cover;
+            box-shadow: 1.25rem 1.375rem 4.75rem 0 rgba(0,0,0,.42);
+        }
+    }
+/* --------------banners responsive-------------------*/
+
+@media screen and (max-width:1340px) {
+    .banner {
+        padding: 0;
+
+        img {
+            min-width: 450px;
+            height: 400px;
+            padding: 0%;
+            margin: 16px;
+        }
+
+        .textoBanner {
+            padding-right: 2%;
+            padding-left: 0;
+
+            h1 {
+                font-size: 36px;
+            }
+        }
     }
 }
 
-/* ------------------------------------------------------*/
+@media screen and (max-width:1028px) {
+    .banner {
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+
+        img {
+            width: 100vw;
+            height: 50vh;
+            padding: 0%;
+            margin: 0;
+            box-shadow: 0rem 0rem 0rem 0 rgba(0,0,0,.42);
+        }
+
+        .textoBanner {
+            padding: 4%;
+
+            h1 {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .banner {
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+
+        img {
+            width: 100vw;
+            min-width: 200px;
+            max-height: 30vh;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0rem 0rem 0rem 0 rgba(0,0,0,.42);
+        }
+
+        .textoBanner {
+            padding: 4%;
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+    }
+}
