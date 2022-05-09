@@ -12,6 +12,84 @@
     <link rel="stylesheet" href="../estilos/estilos.css">    
 </head>
 <body>
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section class="detalleDeObra">
+                        <div class="detalleDeObraContenedor">
+                            <div class="imagenPintura">
+                                <img src="../imagenes/Carta1Modal.jpg" alt="">
+                            </div>          
+                            <section class="infoPintura">  
+                                <!-- <h1>Carta a Theo</h1> -->
+                                <p class="lugarFecha">
+                                    Londres, 31 de julio de 1874
+                                </p>
+                                <h3 class="contenido">
+                                    Querido Theo:
+                                </h3>
+                                <p class="contenido">
+                                    Me alegro de que hayas estado leyendo Michelet y de que realmente lo entiendas. Un libro como ese al menos enseña a uno a ver que hay mucho más que amar de lo que la gente suele pensar.
+                                </p>
+                                <p class="contenido">
+                                    Ese libro fue una revelación e inmediatamente un evangelio para mí.
+                                </p>
+                                <p class="contenido">
+                                    "¡No existe tal cosa como una anciana!" (Esto no quiere decir que no haya ancianas, sino que una mujer no envejece mientras ame y sea amada)
+                                </p>
+                                <p class="contenido">
+                                    Y luego un capítulo como El anhelo de otoño, lo rico que es.
+                                </p>
+                                <p class="contenido">
+                                    Que una mujer es "un ser completamente diferente" de un hombre, y un ser que aún no conocemos, o al menos solo muy superficialmente, como dices, sí, eso ciertamente creo. Y que un la mujer y un hombre pueden llegar a ser uno, es decir, un todo y no dos mitades., que yo también creo.
+                                </p>
+                                <p class="contenido">
+                                    Anna se está manejando bien, vamos a dar paseos maravillosos juntos. Es tan hermoso aquí, si solo uno tiene un buen y un solo ojo, sin muchos rayos. Pero si uno tiene eso, entonces es hermoso en todas partes.
+                                </p>
+                                <p class="contenido">
+                                    Pa no es en absoluto mejor, a pesar de que él y Ma dicen que lo es. Ayer recibimos una carta con todo tipo de planes (si no deberíamos intentar esto y aquello), que sería inviable y ciertamente inútil, y al final Pa dijo una vez más que nos lo dejaría todo a nosotros &c. &c. Bastante débil y desagradable, Theo, y me recordó mucho a las cartas del abuelo, pero ¿qué se puede hacer al respecto? ¡Nuestras queridas tías se están quedando allí ahora, y ciertamente están haciendo mucho bien!
+                                </p>
+                                <p class="contenido">
+                                    Las cosas son como son, y qué es un cuerpo para hacer al respecto, como dijo Young Jochem.
+                                </p>
+                                <p class="contenido">
+                                    Anna y yo miramos el periódico fielmente todos los días y respondemos a los anuncios si los hay. Además, ya nos hemos registrado en una agencia de institutrices. Así que estamos haciendo lo que podemos. Más prisa, menos velocidad.
+                                </p>
+                                <p class="contenido">
+                                    Es bueno que vayas a los Haanebeeks tan a menudo; dales a todos los presentes mis cálidos saludos y dales algunas noticias de mí.
+                                </p>
+                                <p class="contenido">
+                                    Esa pintura de Thijs Maris que compró el Sr. Tersteeg debe ser hermosa, ya he oído hablar de ella, y yo mismo ya he comprado y vendido una completamente en el mismo género.
+                                </p>
+                                <p class="contenido">
+                                    Mi pasión por el dibujo ha vuelto a desaparecer aquí en Inglaterra, pero tal vez la inspiración vuelva a golpear algún día. Vuelvo a leer mucho.
+                                </p>
+                                <p class="contenido">
+                                    Probablemente nos mudaremos el 1 de enero de 1875 a otra galería más grande. El Sr. Obach está en París en este momento, decidiendo si nos haremos cargo o no de esa galería.
+                                </p>
+                                <p class="contenido">
+                                    No menciones esto a nadie por el momento.
+                                </p>
+                                <p class="contenido">
+                                    Les deseo lo mejor; escríbenos de nuevo pronto. Anna disfruta bastante de las pinturas y tiene bastante buen ojo. Ella ya encuentra a Boughton, Maris y Jacquet hermosos, por ejemplo, así que eso es un comienzo. Entre tú y yo, creo que tendremos problemas para encontrar algo para ella, en todas partes dicen que es demasiado joven y que también requieren alemán, pero en cualquier caso ciertamente tiene más oportunidades aquí que en Holanda. Adiós
+                                </p>
+                                <p class="contenido">
+                                    Vincent
+                                </p>
+                                <p class="contenido">
+                                    Puedes imaginar lo maravilloso que es para mí estar aquí con Anna. Dígale al Sr. T. que las pinturas llegaron en buen orden y que le escribiré pronto.
+                                </p>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
@@ -51,7 +129,7 @@
         <h2 class="subtitulo">Cartas originales</h2>
         <div class="galeriaCartas">
             <div class="imagenGaleria">
-                <a href="./carta1.html"><img src="../imagenes/carta1.jpg" alt="carta" class="galeriaIndexImg">
+                <a data-bs-toggle="modal" data-bs-toggle="modal" data-bs-target="#exampleModal1"><img src="../imagenes/carta1.jpg" alt="carta" class="galeriaIndexImg">
                 <div class="overlay">
                     <div class="text">Carta a Theo</div>
                     <p>Londres, Viernes, 31 de Julio 1874</p>

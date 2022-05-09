@@ -1,9 +1,9 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: ('Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
-}
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: ('Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+    }
 
 /* ------------colores--------------*/
 
@@ -89,7 +89,13 @@
 
             .navbar-nav {
 
+                height: 40vh;
+                justify-content: space-between;
+
                 .nav-link {
+
+                    height: 10vh;
+                    padding: 3.5vh;
 
                     &:hover {
                         background-color: #fff;
@@ -116,20 +122,22 @@
 
         .navbar-expand-lg {
 
+            height: 10vh;
+
             .navbar-collapse {
 
                 .navbar-nav {
-                    height: 100%;
+                    height: auto;
 
                     .nav-link {
+                        height: auto;
                         padding-right: 2rem;
                         padding-left: 2rem;
-                        padding-top: 2rem;
-                        padding-bottom: 2rem;
+                        // padding-top: 2rem;
+                        // padding-bottom: 2rem;
                     }
 
                     a {
-                        font-family: Arial, Helvetica, sans-serif;
                         width: auto;
                     }
                 }
@@ -138,7 +146,7 @@
             .navbar-brand {
 
                 img {
-                    height: 5vh;
+                    height: 4vh;
                     margin-left: 42px;
                 }
             }
@@ -280,73 +288,181 @@
     }
 /* --------------banners responsive-------------------*/
 
-@media screen and (max-width:1340px) {
-    .banner {
-        padding: 0;
-
-        img {
-            min-width: 450px;
-            height: 400px;
-            padding: 0%;
-            margin: 16px;
-        }
-
-        .textoBanner {
-            padding-right: 2%;
-            padding-left: 0;
-
-            h1 {
-                font-size: 36px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width:1028px) {
-    .banner {
-        height: auto;
-        padding: 0;
-        flex-direction: column;
-
-        img {
-            width: 100vw;
-            height: 50vh;
-            padding: 0%;
-            margin: 0;
-            box-shadow: 0rem 0rem 0rem 0 rgba(0,0,0,.42);
-        }
-
-        .textoBanner {
-            padding: 4%;
-
-            h1 {
-                font-size: 36px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width:768px) {
-    .banner {
-        height: auto;
-        padding: 0;
-        flex-direction: column;
-
-        img {
-            width: 100vw;
-            min-width: 200px;
-            max-height: 30vh;
+    @media screen and (max-width:1340px) {
+        .banner {
             padding: 0;
-            margin: 0;
-            box-shadow: 0rem 0rem 0rem 0 rgba(0,0,0,.42);
-        }
 
-        .textoBanner {
-            padding: 4%;
+            img {
+                min-width: 450px;
+                height: 400px;
+                padding: 0%;
+                margin: 16px;
+            }
 
-            h1 {
-                font-size: 32px;
+            .textoBanner {
+                padding-right: 2%;
+                padding-left: 0;
+
+                h1 {
+                    font-size: 36px;
+                }
             }
         }
     }
-}
+
+    @media screen and (max-width:1028px) {
+        .banner {
+            height: auto;
+            padding: 0;
+            flex-direction: column;
+
+            img {
+                width: 100vw;
+                height: 50vh;
+                padding: 0%;
+                margin: 0;
+                box-shadow: 0rem 0rem 0rem 0 rgba(0,0,0,.42);
+            }
+
+            .textoBanner {
+                padding: 4%;
+
+                h1 {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .banner {
+            height: auto;
+            padding: 0;
+            flex-direction: column;
+
+            img {
+                width: 100vw;
+                min-width: 200px;
+                max-height: 30vh;
+                padding: 0;
+                margin: 0;
+                box-shadow: 0rem 0rem 0rem 0 rgba(0,0,0,.42);
+            }
+
+            .textoBanner {
+                padding: 4%;
+
+                h1 {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+
+//----------------------------Modal--------------------------*/
+//-------Se aplica al abrir las imagenes de galerías---------*/
+
+    .modal {
+
+        .modal-header {
+            border-bottom: 0;
+        }
+
+        .modal-body {
+            &::-webkit-scrollbar { 
+                display: none; 
+            }
+
+            .detalleDeObra {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .detalleDeObraContenedor {
+                    width: 90vw;
+
+                    .imagenPintura {
+                        max-width: 50vw;
+                        max-height: 90vh;
+                        top: 20vh;
+                        bottom: 10vh;
+                        right: 5%;
+                        width: auto;
+                        position: fixed;
+                        transition: transform .5s;
+                        box-shadow: 0 10px 85px -14px rgba(0, 0, 0, 25%);
+
+                        &:hover {
+                            transform: scale(1.1);
+                            transition: transform .5s;
+                            z-index: 999;
+                        }
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+                    .infoPintura {
+                        width: 36vw;
+                        height: auto;
+                        background-color: #fff;
+                        border-radius: 2px;
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        margin-top: 8vh;
+                        margin-bottom: 10vh;
+                        padding: 30px;
+                        box-shadow: 0 10px 85px -14px rgba(0, 0, 0, 25%);
+
+                        //--aclaración para cartas--*/
+                        .lugarFecha {
+                            text-align: end;
+                        }
+
+                        h3 {
+                            padding-bottom: 16px;
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+//-------------Modal desktop---------------*/
+    @media (max-width:1024px) {
+        .modal {
+
+            .modal-body {
+
+                .detalleDeObra {
+                    flex-direction: column;
+
+                    .detalleDeObraContenedor {
+
+                        .imagenPintura {
+                            max-width: 90vw;
+                            height: auto;
+                            top: 2vh;
+                            right: 0;
+                            position: relative;
+
+                            &:hover {
+                                transform: none;
+                                transition: none;
+                                z-index: 0;
+                            }
+                        }
+
+                        .infoPintura {
+                            width: 90vw;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
