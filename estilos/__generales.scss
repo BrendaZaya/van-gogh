@@ -19,34 +19,60 @@
     $fontSubtitulos: ('Playfair Display', serif);
 
 /* ------------botones--------------*/
-
-    .buttonGrande{
-        background-color: #DFB322;
-        color: white;
-        border: none;
-        padding: 8px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 18px;
-        border-radius: 8px;
-        animation-duration: 0.4s;
-        transition-duration: 0.4s;
-
-            &:hover {
-                background-color: #D9831A;
-                color:#fff;
-                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-            }
-        }
-
     /* ---------CTA en index----------*/
 
     .cta {
         margin-top: 25px;
+        margin-bottom: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .buttonGrande {
+            width: 300px;
+            height: 56px;
+            background-color: #fff;
+            border: none;
+            padding: 8px 32px;
+            position: relative;
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 900;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            vertical-align: middle;
+
+            a {
+                padding: 15px 60px;
+                position: relative;
+                text-decoration: none;
+                color: #000;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                border-radius: 28px;
+                background: rgba( 162, 166, 45, 0.6);
+                background-size: cover;
+                width: 56px;
+                height: 56px;
+                transition: all 0.3s ease;
+            }
+
+            &:hover::before {
+                width: 300px;
+                background: rgba( 162, 166, 45, 0.9);
+            }
+
+            &:hover a{
+                color: #fff;
+                transition: all 0.3s ease;
+            }
+        }
     }
 
 /* ------------textos--------------*/
