@@ -31,7 +31,7 @@
         .buttonGrande {
             width: 300px;
             height: 56px;
-            background-color: #fff;
+            background-color: transparent;
             border: none;
             padding: 8px 32px;
             position: relative;
@@ -75,13 +75,35 @@
         }
     }
 
+    @media (max-width: 1024px) {
+        .cta {
+            .buttonGrande {
+                width: 300px;
+                background-color: rgba( 162, 166, 45, 0.9);
+                border-radius: 28px;
+
+                a {
+                    color: #fff;
+                }
+
+                &:before {
+                    background: transparent;
+                }
+
+                &:hover::before {
+                    background: transparent;
+                }
+            }
+        }
+    }
+
 /* ------------textos--------------*/
 
     .subtitulo {
         text-align: center;
         margin: 60px;
         font-size: 3rem;
-        font-family: 'Playfair Display', serif;
+        font-family: $fontSubtitulos;
     }
 
 /* --------------------navbar------------------------*/
