@@ -80,68 +80,48 @@
         }
     }
 
-    /*------------galería pinturas------------*/
+    /*------------galería pinturas/ galeria Cartas------------*/
 
-    .galeriaPinturas {
+    .galeriaPinturas, .galeriaCartas {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: 50vh;
         padding: 4vh;
-        gap: 1vw;
+        gap: 10px;
         @include galeria();
     }
 
-    /*------------galería cartas------------*/
+    .galeriaPinturas {
+        grid-auto-rows: 50vh;
+    }
 
     .galeriaCartas {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
         grid-auto-rows: 40vh;
-        padding: 4vh;
-        gap: 1vw;
-        @include galeria();
+        
     }
 
     /*-------------------galerías-----------------*/
     /*--------------------tablets-----------------*/
 
     @media (min-width:768px) {
-        .galeriaIndex {
+        .galeriaIndex, .galeriaCartas {
             grid-template-columns: repeat(2,1fr);
         }
-    }
 
-    @media (min-width:768px) {
         .galeriaPinturas {
             grid-template-columns: repeat(3,1fr);
-        }
-    }
-
-    @media (min-width:768px) {
-        .galeriaCartas {
-            grid-template-columns: repeat(2,1fr);
         }
     }
 
     /*------------galerías desktops---------------*/
 
     @media (min-width:1024px) {
-        .galeriaIndex {
+        .galeriaIndex, .galeriaCartas {
             grid-template-columns: repeat(4, 1fr);
             width: 100%;
         }
-    }
 
-    @media (min-width:1024px) {
         .galeriaPinturas {
             grid-template-columns: repeat(5, 1fr);
-            width: 100%;
-        }
-    }
-
-    @media (min-width:1024px) {
-        .galeriaCartas {
-            grid-template-columns: repeat(4, 1fr);
             width: 100%;
         }
     }
