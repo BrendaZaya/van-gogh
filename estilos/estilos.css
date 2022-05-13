@@ -529,81 +529,7 @@ footer .copyright {
   text-align: center;
 }
 
-.seccionGaleria .galeriaIndex {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: repeat 1, 1fr;
-      grid-template-columns: repeat 1, 1fr;
-  grid-auto-rows: 60vh;
-  padding: 4vh;
-  gap: 1vw;
-}
-
-.seccionGaleria .galeriaIndex .imagenGaleria {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.seccionGaleria .galeriaIndex .imagenGaleria .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.seccionGaleria .galeriaIndex .imagenGaleria .overlay p {
-  color: white;
-  font-size: 16px;
-  position: absolute;
-  top: 68%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.seccionGaleria .galeriaIndex .imagenGaleria img {
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
-}
-
-.seccionGaleria .galeriaIndex .imagenGaleria:hover img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
-}
-
-.seccionGaleria .galeriaIndex .imagenGaleria:hover .overlay {
-  opacity: 1;
-}
-
-.seccionGaleria .galeriaIndex .imagenGaleria .text {
-  color: white;
-  font-size: 22px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/*------------galería pinturas/ galeria Cartas------------*/
-.galeriaPinturas, .galeriaCartas {
+.seccionGaleria .galeriaIndex, .seccionGaleria .galeriaPinturas, .seccionGaleria .galeriaCartas {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[1];
@@ -612,13 +538,13 @@ footer .copyright {
   gap: 10px;
 }
 
-.galeriaPinturas .imagenGaleria, .galeriaCartas .imagenGaleria {
+.seccionGaleria .galeriaIndex .imagenGaleria, .seccionGaleria .galeriaPinturas .imagenGaleria, .seccionGaleria .galeriaCartas .imagenGaleria {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-.galeriaPinturas .imagenGaleria .overlay, .galeriaCartas .imagenGaleria .overlay {
+.seccionGaleria .galeriaIndex .imagenGaleria .overlay, .seccionGaleria .galeriaPinturas .imagenGaleria .overlay, .seccionGaleria .galeriaCartas .imagenGaleria .overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -632,7 +558,7 @@ footer .copyright {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.galeriaPinturas .imagenGaleria .overlay p, .galeriaCartas .imagenGaleria .overlay p {
+.seccionGaleria .galeriaIndex .imagenGaleria .overlay p, .seccionGaleria .galeriaPinturas .imagenGaleria .overlay p, .seccionGaleria .galeriaCartas .imagenGaleria .overlay p {
   color: white;
   font-size: 16px;
   position: absolute;
@@ -643,7 +569,7 @@ footer .copyright {
   text-align: center;
 }
 
-.galeriaPinturas .imagenGaleria img, .galeriaCartas .imagenGaleria img {
+.seccionGaleria .galeriaIndex .imagenGaleria img, .seccionGaleria .galeriaPinturas .imagenGaleria img, .seccionGaleria .galeriaCartas .imagenGaleria img {
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
   width: 100%;
@@ -653,18 +579,18 @@ footer .copyright {
   display: block;
 }
 
-.galeriaPinturas .imagenGaleria:hover img, .galeriaCartas .imagenGaleria:hover img {
+.seccionGaleria .galeriaIndex .imagenGaleria:hover img, .seccionGaleria .galeriaPinturas .imagenGaleria:hover img, .seccionGaleria .galeriaCartas .imagenGaleria:hover img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
 
-.galeriaPinturas .imagenGaleria:hover .overlay, .galeriaCartas .imagenGaleria:hover .overlay {
+.seccionGaleria .galeriaIndex .imagenGaleria:hover .overlay, .seccionGaleria .galeriaPinturas .imagenGaleria:hover .overlay, .seccionGaleria .galeriaCartas .imagenGaleria:hover .overlay {
   opacity: 1;
 }
 
-.galeriaPinturas .imagenGaleria .text, .galeriaCartas .imagenGaleria .text {
+.seccionGaleria .galeriaIndex .imagenGaleria .text, .seccionGaleria .galeriaPinturas .imagenGaleria .text, .seccionGaleria .galeriaCartas .imagenGaleria .text {
   color: white;
   font-size: 22px;
   position: relative;
@@ -675,22 +601,27 @@ footer .copyright {
   text-align: center;
 }
 
-.galeriaPinturas {
+.seccionGaleria .galeriaIndex {
+  grid-auto-rows: 60vh;
+}
+
+.seccionGaleria .galeriaPinturas {
   grid-auto-rows: 50vh;
 }
 
-.galeriaCartas {
+.seccionGaleria .galeriaCartas {
   grid-auto-rows: 40vh;
 }
 
+/*------------galería pinturas/ galeria Cartas------------*/
 /*-------------------galerías-----------------*/
 /*--------------------tablets-----------------*/
 @media (min-width: 768px) {
-  .galeriaIndex, .galeriaCartas {
+  .seccionGaleria .galeriaIndex, .seccionGaleria .galeriaCartas {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
-  .galeriaPinturas {
+  .seccionGaleria .galeriaPinturas {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
@@ -698,12 +629,12 @@ footer .copyright {
 
 /*------------galerías desktops---------------*/
 @media (min-width: 1024px) {
-  .galeriaIndex, .galeriaCartas {
+  .seccionGaleria .galeriaIndex, .seccionGaleria .galeriaCartas {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     width: 100%;
   }
-  .galeriaPinturas {
+  .seccionGaleria .galeriaPinturas {
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
     width: 100%;
@@ -744,6 +675,25 @@ main .bannerIndex div h2 {
   font-family: "Playfair Display", serif;
 }
 
+main .intro {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .intro p {
+  width: 60vw;
+  font-size: 22px;
+}
+
 main .frase {
   width: 100%;
   display: -webkit-box;
@@ -769,6 +719,13 @@ main .frase .mt-4 {
 
 main .frase .frase h2 {
   text-shadow: #1f1f1f 1px 1px;
+}
+
+@media screen and (max-width: 768px) {
+  main .intro p {
+    width: 80vw;
+    font-size: 18px;
+  }
 }
 
 /*------------biografia línea de tiempo---------------*/

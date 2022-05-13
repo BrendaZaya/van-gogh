@@ -70,58 +70,79 @@
             text-align: center;
         }
 
-        .galeriaIndex {
+        .galeriaIndex, .galeriaPinturas, .galeriaCartas {
             display: grid;
-            grid-template-columns: repeat (1, 1fr);
-            grid-auto-rows: 60vh;
+            grid-template-columns: repeat(1, 1fr);
             padding: 4vh;
-            gap: 1vw;
+            gap: 10px;
             @include galeria();
         }
+    
+        .galeriaIndex {
+            grid-auto-rows: 60vh;
+        }
+    
+        .galeriaPinturas {
+            grid-auto-rows: 50vh;
+        }
+    
+        .galeriaCartas {
+            grid-auto-rows: 40vh;
+            
+        }
+
     }
 
     /*------------galería pinturas/ galeria Cartas------------*/
 
-    .galeriaPinturas, .galeriaCartas {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        padding: 4vh;
-        gap: 10px;
-        @include galeria();
-    }
+    // .galeriaIndex, .galeriaPinturas, .galeriaCartas {
+    //     display: grid;
+    //     grid-template-columns: repeat(1, 1fr);
+    //     padding: 4vh;
+    //     gap: 10px;
+    //     @include galeria();
+    // }
 
-    .galeriaPinturas {
-        grid-auto-rows: 50vh;
-    }
+    // .galeriaIndex {
+    //     grid-auto-rows: 60vh;
+    // }
 
-    .galeriaCartas {
-        grid-auto-rows: 40vh;
+    // .galeriaPinturas {
+    //     grid-auto-rows: 50vh;
+    // }
+
+    // .galeriaCartas {
+    //     grid-auto-rows: 40vh;
         
-    }
+    // }
 
     /*-------------------galerías-----------------*/
     /*--------------------tablets-----------------*/
 
     @media (min-width:768px) {
-        .galeriaIndex, .galeriaCartas {
-            grid-template-columns: repeat(2,1fr);
-        }
+        .seccionGaleria {
+            .galeriaIndex, .galeriaCartas {
+                grid-template-columns: repeat(2,1fr);
+            }
 
-        .galeriaPinturas {
-            grid-template-columns: repeat(3,1fr);
+            .galeriaPinturas {
+                grid-template-columns: repeat(3,1fr);
+            }
         }
     }
 
     /*------------galerías desktops---------------*/
 
     @media (min-width:1024px) {
-        .galeriaIndex, .galeriaCartas {
-            grid-template-columns: repeat(4, 1fr);
-            width: 100%;
-        }
+        .seccionGaleria {
+            .galeriaIndex, .galeriaCartas {
+                grid-template-columns: repeat(4, 1fr);
+                width: 100%;
+            }
 
-        .galeriaPinturas {
-            grid-template-columns: repeat(5, 1fr);
-            width: 100%;
+            .galeriaPinturas {
+                grid-template-columns: repeat(5, 1fr);
+                width: 100%;
+            }
         }
     }
