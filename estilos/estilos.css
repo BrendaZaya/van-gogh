@@ -420,10 +420,10 @@ footer .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -434,19 +434,22 @@ footer .copyright {
 }
 
 .modal .modal-body .detalleDeObra .detalleDeObraContenedor .imagenPintura {
-  max-width: 50vw;
   max-height: 90vh;
   top: 20vh;
   bottom: 10vh;
   right: 5%;
-  width: auto;
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
-  -webkit-box-shadow: 0 10px 85px -14px black;
-          box-shadow: 0 10px 85px -14px black;
 }
 
 .modal .modal-body .detalleDeObra .detalleDeObraContenedor .imagenPintura:hover {
@@ -456,12 +459,16 @@ footer .copyright {
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
-  z-index: 999;
 }
 
 .modal .modal-body .detalleDeObra .detalleDeObraContenedor .imagenPintura img {
   height: 100%;
-  width: 100%;
+  max-width: 100%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 10px 85px -14px black;
+          box-shadow: 0 10px 85px -14px black;
 }
 
 .modal .modal-body .detalleDeObra .detalleDeObraContenedor .infoPintura {
@@ -476,10 +483,11 @@ footer .copyright {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
+  position: relative;
   margin-top: 8vh;
   margin-bottom: 10vh;
   padding: 30px;
+  left: 5%;
   -webkit-box-shadow: 0 10px 85px -14px black;
           box-shadow: 0 10px 85px -14px black;
 }
@@ -500,9 +508,12 @@ footer .copyright {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .modal .modal-body .detalleDeObra .detalleDeObraContenedor .imagenPintura {
-    max-width: 90vw;
+  .modal .modal-body .detalleDeObra .detalleDeObraContenedor {
     height: auto;
+  }
+  .modal .modal-body .detalleDeObra .detalleDeObraContenedor .imagenPintura {
+    width: 90vw;
+    height: 80vh;
     top: 2vh;
     right: 0;
     position: relative;
@@ -512,15 +523,18 @@ footer .copyright {
             transform: none;
     -webkit-transition: none;
     transition: none;
-    z-index: 0;
+  }
+  .modal .modal-body .detalleDeObra .detalleDeObraContenedor .imagenPintura img {
+    width: 100%;
   }
   .modal .modal-body .detalleDeObra .detalleDeObraContenedor .infoPintura {
     width: 90vw;
-    margin-top: 0;
+    margin-top: 0vh;
+    left: 0;
   }
 }
 
-/*------------galería index------------*/
+/*------------galerías (index, pinturas y cartas)------------*/
 .seccionGaleria {
   padding: 2vh;
 }
@@ -613,7 +627,6 @@ footer .copyright {
   grid-auto-rows: 40vh;
 }
 
-/*------------galería pinturas/ galeria Cartas------------*/
 /*-------------------galerías-----------------*/
 /*--------------------tablets-----------------*/
 @media (min-width: 768px) {
