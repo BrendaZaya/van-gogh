@@ -325,6 +325,7 @@ footer .copyright {
 
 .banner .textoBanner p {
   margin: 0;
+  padding: 8px;
 }
 
 .banner img {
@@ -557,6 +558,7 @@ footer .copyright {
   position: relative;
   width: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .seccionGaleria .galeriaIndex .imagenGaleria .overlay, .seccionGaleria .galeriaPinturas .imagenGaleria .overlay, .seccionGaleria .galeriaCartas .imagenGaleria .overlay {
@@ -690,7 +692,7 @@ main .bannerIndex div h2 {
 }
 
 main .intro {
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
